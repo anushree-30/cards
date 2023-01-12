@@ -27,7 +27,9 @@ const EditBucket = () => {
   }, []);
 
   const loadBucket = async () => {
-    const response = await axios.get(`/buckets/${id}`);
+    const response = await axios.get(
+      `https://json-server-api-fnak.onrender.com/buckets/${id}`
+    );
     setBucket(response.data);
   };
   const navigate = useNavigate();
@@ -38,7 +40,10 @@ const EditBucket = () => {
 
   const submitHandler = async () => {
     try {
-      await axios.put(`/buckets/${id}`, bucket);
+      await axios.put(
+        `https://json-server-api-fnak.onrender.com/buckets/${id}`,
+        bucket
+      );
       alert("Bucket updated successfully");
     } catch (error) {
       alert(error.response.data.error);

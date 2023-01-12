@@ -28,7 +28,9 @@ const EditCard = () => {
   }, []);
 
   const loadCard = async () => {
-    const response = await axios.get(`/cards/${id}`);
+    const response = await axios.get(
+      `https://json-server-api-fnak.onrender.com/cards/${id}`
+    );
     setCard(response.data);
   };
   const navigate = useNavigate();
@@ -39,7 +41,10 @@ const EditCard = () => {
 
   const submitHandler = async () => {
     try {
-      await axios.put(`/cards/${id}`, card);
+      await axios.put(
+        `https://json-server-api-fnak.onrender.com/cards/${id}`,
+        card
+      );
       alert("Card updated successfully");
     } catch (error) {
       alert(error.response.data.error);

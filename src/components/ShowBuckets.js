@@ -39,7 +39,9 @@ const ShowBuckets = () => {
   }, []);
 
   const getBuckets = async () => {
-    const response = await axios.get(`buckets`);
+    const response = await axios.get(
+      `https://json-server-api-fnak.onrender.com/buckets`
+    );
     setBuckets(response.data);
   };
 

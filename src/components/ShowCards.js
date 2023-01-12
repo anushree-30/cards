@@ -39,12 +39,14 @@ const ShowCards = () => {
   }, []);
 
   const getCards = async () => {
-    const response = await axios.get(`cards`);
+    const response = await axios.get(
+      `https://json-server-api-fnak.onrender.com/cards`
+    );
     setCards(response.data);
   };
 
   const deleteData = async (id) => {
-    await axios.delete(`cards/${id}`);
+    await axios.delete(`https://json-server-api-fnak.onrender.com/cards/${id}`);
     getCards();
   };
 

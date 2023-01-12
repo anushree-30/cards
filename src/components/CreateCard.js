@@ -30,7 +30,7 @@ const CreateCard = () => {
 
   const submitHandler = async () => {
     try {
-      await axios.post(`cards`, card);
+      await axios.post(`https://json-server-api-fnak.onrender.com/cards`, card);
       alert("Card created successfully");
     } catch (error) {
       alert(error.response.data.error);

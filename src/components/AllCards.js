@@ -12,7 +12,9 @@ const AllCards = () => {
   }, []);
 
   const getCards = async () => {
-    const response = await axios.get(`/buckets/${id}/cards`);
+    const response = await axios.get(
+      `https://json-server-api-fnak.onrender.com/buckets/${id}/cards`
+    );
     setCards(response.data);
   };
 
