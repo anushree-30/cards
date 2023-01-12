@@ -1,0 +1,38 @@
+{
+  "buckets": [
+    {
+      "id": 1,
+      "name": "Computer"
+    },
+    {
+      "id": 2,
+      "name": "New"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "name": "Anushree",
+      "url": "http://www.google.com",
+      "bucketId": 1
+    },
+    {
+      "id": 2,
+      "name": "Archit",
+      "url": "http://www.flipkart.com",
+      "bucketId": 1
+    },
+    {
+      "id": 3,
+      "name": "Apoorva",
+      "url": "http://www.google22.com",
+      "bucketId": 2
+    },
+    {
+      "id": 4,
+      "name": "Anushka",
+      "url": "http://www.amazon.com",
+      "bucketId": 2
+    }
+  ]
+}
