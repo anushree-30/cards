@@ -9,7 +9,9 @@ const BasicCard = ({ card }) => {
           <strong>{card.name}</strong>
         </Card.Title>
 
-        <Card.Text as="h3">{card.url}</Card.Text>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src={card.url}></iframe>
+        </div>
       </Card.Body>
     </Card>
   );
